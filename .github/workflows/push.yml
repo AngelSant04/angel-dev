@@ -1,17 +1,19 @@
 name: Deploy de la pagina Angel Dev
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  deploy-page:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-
-      - name: Deploy 🚀
+      - name: Checkout código 🛎️
+        uses: actions/checkout@v2
+      
+      - name: Desplegar a GitHub Pages 🌐
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: gh-pages
-          folder: .
+          branch: gh-pages  # Rama donde se desplegará el sitio
+          folder: .  # Carpeta que contiene los archivos a desplegar, cambia esto si tu carpeta de compilación tiene otro nombre
