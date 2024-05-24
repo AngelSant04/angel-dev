@@ -15,5 +15,5 @@ jobs:
       - name: Desplegar a GitHub Pages 🌐
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          branch: gh-pages  # Rama donde se desplegará el sitio
+          branch: gh-pages
           folder: .  # Carpeta que contiene los archivos a desplegar, cambia esto si tu carpeta de compilación tiene otro nombre
