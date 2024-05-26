@@ -5,22 +5,23 @@
   /*           HEADER            */
   /* =========================== */
   header .navbar {
+    /* width: 100%; */
+    height: 70px;
+  }
+  .navbar-collapse .nav {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around !important;
   }
-  .navbar .container {
-    justify-content: end;
-    padding: 15px;
-    width: 100%;
+  header .navbar .nav .nav-item {
+    margin-right: 0px;
   }
-  .navbar-collapse {
-    display: none;
-    width: 100%;
-    background: white;
-    position: absolute;
-    top: 100px;
-    left: 0;
+  .nav .nav-link {
+    font: 200 13px/70px "Rubik", sans-serif;
   }
   /* =========================== */
   /*         FIN HEADER          */
@@ -29,11 +30,73 @@
   /* =========================== */
   /*           BANNER            */
   /* =========================== */
+  .seccion_banner .banner_inner .container .row {
+    padding: 70px 0px 0px 0px;
+  }
+  .seccion_banner .banner_inner .container .row .txt-left {
+    height: 190px;
+  }
+  .seccion_banner .banner_inner .banner_content h3 {
+    font-size: 23px;
+    margin: 0;
+  }
+  .seccion_banner .banner_inner .banner_content h3:after {
+    display: none;
+  }
+  .seccion_banner .banner_inner .banner_content h1 {
+    margin: 5px 0;
+    font-size: 30px;
+    line-height: 60px;
+  }
+  .seccion_banner .banner_inner .banner_content h5 {
+    font-size: 19px;
+    margin: 0;
+  }
   .bannImgAnim {
     display: none;
   }
   /* =========================== */
   /*         FIN BANNER          */
+  /* =========================== */
+
+  /* =========================== */
+  /*       INICIO CONOCEME       */
+  /* =========================== */
+  .about_area .about_img {
+    margin-bottom: 40px;
+  }
+  /* =========================== */
+  /*        FIN CONOCEME         */
+  /* =========================== */
+  /* =========================== */
+  /*    INICIO FOOTER CONOCEME   */
+  /* =========================== */
+  .brand_area {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  /* =========================== */
+  /*      FIN FOOTER CONOCEME   */
+  /* =========================== */
+
+  /* =========================== */
+  /*      INICIO VIDA PROFE      */
+  /* =========================== */
+  .portfolio_area .filters ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #222222;
+    cursor: pointer;
+  }
+  .portfolio-grid,
+  .portfolio-grid-certificados {
+    grid-template-columns: 1fr;
+  }
+  /* =========================== */
+  /*       FIN VIDA PROFE        */
   /* =========================== */
 }
 

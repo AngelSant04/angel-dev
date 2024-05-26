@@ -155,6 +155,8 @@ header .navbar {
   margin: 0;
   flex-wrap: wrap;
   list-style: none;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
 }
 header .navbar .nav .nav-item {
   margin-right: 45px;
@@ -366,6 +368,7 @@ header .navbar .nav .nav-item.submenu ul .nav-item:last-child {
 /* =========================== */
 .feature_inner .col-lg-3 {
   height: 350px;
+  margin: 15px 0;
 }
 .feature_item {
   padding: 0px 25px;
