@@ -31,7 +31,7 @@
   /*           BANNER            */
   /* =========================== */
   .seccion_banner .banner_inner .container .row {
-    padding: 70px 0px 0px 0px;
+    padding: 70px 0px 20px 0px;
   }
   .seccion_banner .banner_inner .container .row .txt-left {
     height: 190px;
