@@ -1,6 +1,12 @@
 /* dispositivos mobiles < 768 < dispositivos medianos < 1024px < dispositivos de computadoras */
 
 @media (max-width: 767.8px) {
+
+  .paddingBottomCien {
+    padding-bottom: 80px;
+  }
+
+
   /* =========================== */
   /*           HEADER            */
   /* =========================== */
