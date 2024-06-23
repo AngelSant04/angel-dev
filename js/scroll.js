@@ -13,18 +13,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function scrollHandler(e) {
     e.preventDefault();
-    if (e.srcElement.id == "btnInicio") {
-      animContainer.style.display = "block";
-      setTimeout(function () {
-        animContainer.classList.remove("animate__backOutRight");
-        animContainer.classList.add("animate__backInRight");
-      }, 150);
-    } else {
+    if (!(window.innerWidth <= 1023.98)) {
+      if (e.srcElement.id == "btnInicio") {
+        animContainer.style.display = "block";
+        setTimeout(function () {
+          animContainer.classList.remove("animate__backOutRight");
+          animContainer.classList.add("animate__backInRight");
+        }, 150);
+      } else {
+        animContainer.classList.remove("animate__backInRight");
+        animContainer.classList.add("animate__backOutRight");
+        setTimeout(function () {
+          animContainer.style.display = "none";
+        }, 500);
+      }
+    } else if (
+      window.innerWidth >= 768 &&
+      animContainer.style.display == "none"
+    ) {
+      animContainer.classList.remove("animate__backOutRight");
       animContainer.classList.remove("animate__backInRight");
-      animContainer.classList.add("animate__backOutRight");
-      setTimeout(function () {
-        animContainer.style.display = "none";
-      }, 500);
+      animContainer.style.display = "block";
     }
 
     const targetId = this.getAttribute("href").substring(1);
@@ -74,17 +83,35 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollPos = newScrollPos;
 
     if (finEjeY / 2 < scrollYPosition && isScrollingDown == "down") {
-      animContainer.classList.remove("animate__backInRight");
-      animContainer.classList.add("animate__backOutRight");
-      setTimeout(function () {
-        animContainer.style.display = "none";
-      }, 200);
-    } else if (finEjeY / 2 > scrollYPosition && isScrollingDown == "up") {
-      setTimeout(function () {
+      if (!(window.innerWidth <= 1023.98)) {
+        animContainer.classList.remove("animate__backInRight");
+        animContainer.classList.add("animate__backOutRight");
+        setTimeout(function () {
+          animContainer.style.display = "none";
+        }, 200);
+      } else if (
+        window.innerWidth >= 768 &&
+        animContainer.style.display == "none"
+      ) {
+        animContainer.classList.remove("animate__backOutRight");
+        animContainer.classList.remove("animate__backInRight");
         animContainer.style.display = "block";
-      }, 300);
-      animContainer.classList.remove("animate__backOutRight");
-      animContainer.classList.add("animate__backInRight");
+      }
+    } else if (finEjeY / 2 > scrollYPosition && isScrollingDown == "up") {
+      if (!(window.innerWidth <= 1023.98)) {
+        setTimeout(function () {
+          animContainer.style.display = "block";
+        }, 300);
+        animContainer.classList.remove("animate__backOutRight");
+        animContainer.classList.add("animate__backInRight");
+      } else if (
+        window.innerWidth >= 768 &&
+        animContainer.style.display == "none"
+      ) {
+        animContainer.classList.remove("animate__backOutRight");
+        animContainer.classList.remove("animate__backInRight");
+        animContainer.style.display = "block";
+      }
     }
     // }
   }
